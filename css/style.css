@@ -1,0 +1,126 @@
+/* Self-order Kiosk
+  Assignment 2
+  Author: Michael Westmacott, 2022.06.01: Created
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,800;1,400&display=swap');
+html {
+     font-family: 'Poppins', sans-serif;
+}
+* {
+     box-sizing: border-box;
+}
+.clear {
+	clear: both;
+}
+body {
+     margin-top: 2%;
+     background-color:#0b94ca;
+}
+/* Form styling */
+.form-style {
+     background-color:  #CA410B;
+     color:white;
+     max-width:850px;
+     margin: auto;
+     border: 3px solid white;
+     border-radius: 20px;
+     padding: 2%;
+     box-shadow: 0 0 10px black;
+}
+label {
+     width: 200px;
+     display: inline-block;
+     padding-top: 30px;
+     padding-bottom: 10px;
+}
+input {
+     padding: 2px 2px 2px 10px;
+     width: 160px;
+     font-size: 14px;
+}
+input::placeholder {
+     font-style: italic;
+     font-size: 12px;
+}
+.half-box {
+     float:left;
+     width: 50%;
+     padding: 1%;
+}
+.full-box {
+     width: 100%;
+     display: flex;
+     justify-content: space-around;
+}
+.submit {
+     margin-top: 40px;
+     width: 45%;
+     padding: 5px 0px;
+     font-size: 1.5em;  
+     outline: none;
+     color: white;
+     text-shadow: 1px 1px black;
+     background: linear-gradient(135deg, #0b94ca, white );
+}
+.submit:hover {
+     background: linear-gradient(135deg, white, #0b94ca);
+     font-size: 1.5em;
+     font-weight: bold;
+}
+/* Output Styling  */
+.output-box {
+     margin:2% auto;
+     background-color:  #CA410B;
+     color:white;
+     max-width:850px;
+     border: 3px solid white;
+     border-radius: 20px;
+     padding: 2%;
+     box-shadow: 0 0 10px black;
+     display: none;
+     text-align: center;
+}
+div > p {
+     color: yellow;
+}
+h1, h2 {
+     text-align: center;
+     margin: 0px;
+}
+table {
+     border-collapse: collapse;
+     margin: auto;
+}
+th,td {
+     padding: 1em;
+     border:1px solid white;
+}
+table > th> :nth-child(2){
+     text-align: right;
+}
+.table-right{
+     text-align: right;
+}
+/* Responsive media queries */
+@media (max-width:812px) {
+     .half-box {
+          text-align: center;
+     }
+     .form-style {
+          min-width:450px;
+     }
+}
+@media (max-width:460px) {
+     .half-box {
+          float: none;
+          width: 100%;
+          padding: none;
+     }
+     .form-style {
+          min-width: 270px;
+     }
+     input{
+          width: 120px;
+     }
+}

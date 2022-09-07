@@ -1,0 +1,87 @@
+<!--  Self-order Kiosk
+      Assignment 2
+      Author: Michael Westmacott, 2022.06.01: Created 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="description" />
+    <meta name="keywords" content="one, two, three" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Self-order Kiosk</title>
+    <!-- external CSS link -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main>
+      <form
+        class="form-style"
+        name=""
+        action=""
+        method="post"
+        onsubmit="return submitForm()"
+      >
+        <h1>Electronics Kiosk</h1>
+        <div class="half-box">
+          <label>First Name</label>
+          <input id="customerFirstName" placeholder="First" name="firstName" />
+          <label class="last">Last Name</label>
+          <input id="customerLastName" placeholder="Last" name="lastName" />
+          <label>Phone Number</label>
+          <input
+            id="customerPhoneNumber"
+            placeholder="123-123-1234"
+            name="phoneNumber"
+          />
+          <label>Credit Card Number</label>
+          <input
+            id="customerCardNumber"
+            placeholder="xxxx-xxxx-xxxx-xxxx"
+            name="cardNumber"
+          />
+          <label>Credit Card Expiry Month</label>
+          <input
+            id="customerCardExpiryMonth"
+            placeholder="01"
+            name="expiryMonth"
+          />
+        </div>
+
+        <div class="half-box">
+          <label>Credit Card Expiry Year</label>
+          <input
+            id="customerCardExpiryYear"
+            placeholder="2023"
+            name="expiryYear"
+          />
+          <label>Mouse Pad ($5)</label>
+          <input id="orderQtyOne" placeholder="Qty" name="productOne" /> <br />
+          <label>Webcam ($25)</label>
+          <input id="orderQtyTwo" placeholder="Qty" name="productTwo" /> <br />
+          <label>Keyboard ($40)</label>
+          <input id="orderQtyThree" placeholder="Qty" name="productThree" />
+          <label>Boombox ($60)</label>
+          <input id="orderQtyFour" placeholder="Qty" name="productFour" />
+        </div>
+
+        <div class="full-box">
+          <input
+            onclick="clearBtn()"
+            class="submit clear-btn"
+            type="reset"
+            value="Clear"
+          />
+          <input class="submit" type="submit" value="Checkout" />
+        </div>
+        <div class="clear"></div>
+      </form>
+    </main>
+
+    <!-- Output section for errors or receipt -->
+    <div id="myOutput" class="output-box"></div>
+
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>
